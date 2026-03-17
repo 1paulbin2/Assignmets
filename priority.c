@@ -6,11 +6,11 @@
 typedef struct {
     char pid[20];
     int at, bt, pr;
-    int rt;   // remaining time
-    int ct;   // completion time
-    int tat;  // turnaround time
-    int wt;   // waiting time
-    int index; // input order
+    int rt;   
+    int ct;   
+    int tat; 
+    int wt;   
+    int index; 
 } Process;
 
 int main() {
@@ -28,7 +28,7 @@ int main() {
 
     int completed = 0, time = 0;
 
-    // start from the earliest arrival time
+
     int minAT = p[0].at;
     for (int i = 1; i < n; i++) {
         if (p[i].at < minAT) minAT = p[i].at;
@@ -54,7 +54,7 @@ int main() {
             continue;
         }
 
-        // execute selected process for 1 time unit
+    
         p[idx].rt--;
         time++;
 
